@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_app/widgets/global/home_avatar_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -28,32 +29,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Stack(
-            children: [
-              Container(
-                height: 80,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30),
-                  ),
-                  color: Colors.blue,
-                ),
-              ),
-              Center(
-                child: CircleAvatar(
-                  radius: 60,
-                  backgroundColor: Colors.blue[200],
-                  child: Icon(Icons.person, size: 100, color: Colors.white),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
+      body: Column(children: [HomeAvatarWidget()]),
     );
   }
 }
