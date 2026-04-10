@@ -22,6 +22,14 @@ class MainApp extends StatelessWidget {
           ),
           elevation: 100,
           backgroundColor: Colors.blue,
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                // Aksi ketika tombol pencarian ditekan
+              },
+            ),
+          ],
         ),
         body: Center(child: Text('Hello World!')),
       ),
