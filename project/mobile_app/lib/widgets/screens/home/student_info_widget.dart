@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_app/widgets/global/text/styles.dart';
 
 class HomeStudentInfoWidget extends StatelessWidget {
   const HomeStudentInfoWidget({super.key});
@@ -14,27 +15,19 @@ class HomeStudentInfoWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('08141123 | Status: ', style: TextStyle(fontSize: 16)),
+            Text('08141123 | Status: ', style: AppTextStyles.reguler),
             Chip(
               backgroundColor: Colors.green,
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
               padding: EdgeInsets.zero,
               labelPadding: EdgeInsets.symmetric(horizontal: 4, vertical: -4),
-              label: Text(
-                'AKTIF',
-                style: TextStyle(color: Colors.white, fontSize: 13),
-              ),
+              label: Text('AKTIF', style: AppTextStyles.chip),
             ),
           ],
         ),
-        Text(
-          'Sistem Informasi',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-        Text(
-          'Semester 6 | Kelas A',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
+        SizedBox(height: 10),
+        Text('Sistem Informasi', style: AppTextStyles.reguler_bold),
+        Text('Semester 6 | Kelas A', style: AppTextStyles.reguler_bold),
       ],
     );
   }
