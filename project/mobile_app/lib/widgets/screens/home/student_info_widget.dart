@@ -8,10 +8,7 @@ class HomeStudentInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          'Muhammad Bunyamin',
-          style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
-        ),
+        Text('Muhammad Bunyamin', style: AppTextStyles.title),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
