@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_app/widgets/global/card.dart';
+import 'package:mobile_app/widgets/screens/home/academic_widget.dart';
 import 'package:mobile_app/widgets/screens/home/avatar_widget.dart';
 import 'package:mobile_app/widgets/screens/home/student_info_widget.dart';
 
@@ -31,16 +32,18 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          HomeAvatarWidget(),
-          HomeStudentInfoWidget(),
-          AppCard(title: 'Informasi Pribadi', content: Text('content')),
-          AppCard(title: 'Akademik', content: Text('content')),
-          AppCard(title: 'Mata Kuliah', content: Text('content')),
-          AppCard(title: 'Kegiatan', content: Text('content')),
-          AppCard(content: Text('content')),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeAvatarWidget(),
+            HomeStudentInfoWidget(),
+            AppCard(title: 'Informasi Pribadi', content: Text('content')),
+            HomeAcademicWidget(),
+            AppCard(title: 'Mata Kuliah', content: Text('content')),
+            AppCard(title: 'Kegiatan', content: Text('content')),
+            AppCard(content: Text('content')),
+          ],
+        ),
       ),
     );
   }
