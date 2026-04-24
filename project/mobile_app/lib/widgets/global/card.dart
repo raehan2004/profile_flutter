@@ -20,7 +20,7 @@ class AppCard extends StatelessWidget {
           children: [
             Align(
               alignment: Alignment.centerLeft,
-              child: Text(title, style: AppTextStyles.title),
+              child: Text(title, style: AppTextStyles.sectionTitle),
             ),
             content,
           ],

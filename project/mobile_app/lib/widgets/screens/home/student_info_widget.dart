@@ -8,23 +8,48 @@ class HomeStudentInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text('Muhammad Bunyamin', style: AppTextStyles.title),
+        const SizedBox(height: 8),
+        Text(
+          'RAEHAN PRATAMA SINAGA',
+          style: AppTextStyles.nameTitle,
+          textAlign: TextAlign.center,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('08141123 | Status: ', style: AppTextStyles.reguler),
+            Text('23021450037 | Status: ', style: AppTextStyles.reguler),
             Chip(
               backgroundColor: Colors.green,
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
               padding: EdgeInsets.zero,
-              labelPadding: EdgeInsets.symmetric(horizontal: 4, vertical: -4),
+              labelPadding: EdgeInsets.symmetric(horizontal: 5, vertical: -4),
               label: Text('AKTIF', style: AppTextStyles.chip),
             ),
           ],
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 8),
         Text('Sistem Informasi', style: AppTextStyles.reguler_bold),
-        Text('Semester 6 | Kelas A', style: AppTextStyles.reguler_bold),
+        RichText(
+          text: TextSpan(
+            style: AppTextStyles.reguler.copyWith(color: Colors.black),
+            children: [
+              const TextSpan(text: 'Semester: '),
+              TextSpan(
+                text: '6',
+                style: AppTextStyles.reguler.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const TextSpan(text: ' • Klass: '),
+              TextSpan(
+                text: 'SI-I-2023',
+                style: AppTextStyles.reguler.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

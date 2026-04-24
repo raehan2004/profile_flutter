@@ -8,21 +8,27 @@ class HomeAvatarWidget extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 80,
+          height: 110,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(30),
               bottomRight: Radius.circular(30),
             ),
-            color: Colors.blue,
+            color: Color(0xFF3D78C5),
           ),
         ),
-        Center(
-          child: CircleAvatar(
-            radius: 60,
-            backgroundColor: Colors.blue[200],
-            child: Icon(Icons.person, size: 100, color: Colors.white),
+        const Padding(
+          padding: EdgeInsets.only(top: 28),
+          child: Center(
+            child: CircleAvatar(
+              radius: 63,
+              backgroundColor: Colors.white,
+              child: CircleAvatar(
+                radius: 58,
+                backgroundImage: AssetImage('assets/images/Raehan_HIMSI.jpg'),
+              ),
+            ),
           ),
         ),
       ],
